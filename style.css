@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 2vw;
+    z-index: 100;
+    background-color: #111111;
+    overflow: hidden;
+}
+
+
+.navLinks {
+    display: flex;
+    gap: 2vw;
+}
+
+.navLinks a {
+    font-size: 0.6vw;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.mainLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.mainLinks::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ffffff;
+    /* Shrink the line to 0 width from the center */
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mainLinks:hover::after {
+    transform: scaleX(1);
+}
+
+.primaryBTN {
+    padding: 0.8vw 2vw;
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid #ffffff;
+    font-size: 0.8vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.primaryBTN:hover {
+    background-color: #4e4e4e;
+    transform: translateY(-3px);
+}
+
+.primaryBTN .talkicon svg {
+    width: 16px;
+    margin-left: 0.6vw;
+    fill: #ffffff;
+}
+
+.nav:hover .navOpen {
+    height: 100%;
+    z-index: -1;
+}
+
+.nav:hover .talkicon svg{
+    fill: #ffffff;
+}
+
+.navOpen {
+    position: absolute;
+    background-color: #FF0000;
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-bottom: 0.2px solid #dadada;
+    transition: all ease 0.48s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+}
+
+
+.header .nav .logo img{
+    width: 8vw;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10vh;
+}
+
+.hero-content {
+    padding-top: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 100%;
+}
+
+#page1 h1 svg {
+    height: 6vw;
+    width: 6vw;
+    fill: #111111;
+    border-radius: 50%;
+    background-color: #FF0000;
+}
+
+#page1 p {
+    text-align: center;
+    font-weight: 400;
+    margin-top: 3vh;
+    line-height: 160%;
+}
+
+#page1 p .cover {
+    border: 1px solid #4e4e4e;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: black;
+}
+
+.ticker {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding: 1vw;
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.ticker-track {
+    display: flex;
+    animation: tickersk 10s linear infinite;
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding-right: 2vw;
+}
+
+.horizontal .logos{
+    width: 80px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+@keyframes tickersk {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.blur-left {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left, transparent, #111111);
+    position: absolute;
+    left: 0;
+    z-index: 2;
+}
+
+.blur-right {
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to right, transparent, #111111);
+    position: absolute;
+    right: 0;
+}
+
+#page2 {
+    height: 100vh;
+    background-color: #111111;
+}
