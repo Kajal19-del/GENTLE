@@ -2,7 +2,7 @@
 
 const hover = () => {
 
-    var column = document.querySelectorAll(".column");
+    const column = document.querySelectorAll(".column");
     
     column.forEach((elem) => {
         elem.addEventListener('mouseenter', () => {
