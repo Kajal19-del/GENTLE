@@ -14,6 +14,13 @@ body {
     width: 100%;
 }
 
+.regular-text {
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 140%;
+    padding-bottom: 4vh;
+}
+
 .header {
     background-color: #111111;
     display: flex;
@@ -237,12 +244,12 @@ body {
     padding: 4vw 10vw;
     background-color: #111111;
     display: flex;
-    justify-content: space-between;
+    gap: 8vw;
     border-top: 1px solid #333;
 }
 
 .left-content {
-    width: 40%;
+    width: 50%;
     height: 100%;
 }
 
@@ -263,13 +270,6 @@ body {
     line-height: 160%;
 }
 
-.information h3 {
-    font-size: 1vw;
-    font-weight: 400;
-    line-height: 140%;
-    padding-bottom: 4vh;
-}
-
 .columns {
     height: 100%;
     display: flex;
@@ -288,7 +288,6 @@ body {
 }
 
 .column .context {
-    font-size: 1vw;
     width: 70%;
     z-index: 3;
 }
@@ -317,7 +316,7 @@ body {
     display: inline-block;
 }
 
-.page3 {
+#page3 {
     width: 100%;
     height: 100vh;
     background-image: url(./Assets/background.avif);
@@ -325,7 +324,7 @@ body {
     background-position: center;
 }
 
-.page4 {
+#page4 {
     width: 100%;
     height: 100vh;
     background-color: #111111;
@@ -374,11 +373,16 @@ body {
 
 .numbers-container {
     display: flex;
-    gap: 1vw;
+    gap: 4vw;
 }
 
 .numbers-container .left-info {
     width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
 }
 
 .numbers-container .right-info {
@@ -389,7 +393,7 @@ body {
 
 .boxes {
     width: 100%;
-    padding: 12px 10px;
+    padding: 8px 10px;
     height: 30vh;
     display: flex;
     flex-direction: column;
@@ -398,10 +402,31 @@ body {
     background-color: #4e4e4e;
 }
 
-.boxes h2 {
-    font-size: 2vw;
+.top-design {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5vw;
 }
 
-.boxes p {
-    font-size: 1vw;
+.ui-composition {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 0.4vw;
+}
+
+.ui-composition span {
+    display: block;
+}
+
+.element {
+    width: 20px;
+    height: 20px;
+    background-color:#FF0000;
+}
+
+.boxes h2 {
+    font-size: 2vw;
 }
